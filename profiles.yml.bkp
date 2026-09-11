@@ -1,0 +1,16 @@
+# How dbt connects to the warehouse (the "keycard").
+# host is env-driven so the SAME file works either way:
+#   - inside the dbt container  -> DBT_HOST=postgres, DBT_PORT=5432 (compose sets these)
+#   - from your host machine     -> defaults to localhost:15432
+dbt_class:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      port: 5432
+      database: analyics
+      schema: dbt_assignment
+      threads: 16
+      host: postgres
+      user: dbt
+      password: dbt

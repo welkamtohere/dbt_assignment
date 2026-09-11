@@ -1,0 +1,14 @@
+
+    
+    
+    
+    create table "analytics"."dbt_assignment_assignment"."rating_descriptions" ("rating" text,"description" text)
+  ;
+    -- dbt seed --
+    
+          insert into "analytics"."dbt_assignment_assignment"."rating_descriptions" ("rating", "description") values
+          (%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s)
+      
+
+;
+  

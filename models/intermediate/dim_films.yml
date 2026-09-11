@@ -1,0 +1,31 @@
+
+models:
+  - name: dim_films
+    description: "Film dimension — title, category, rating, and rental activity."
+    columns:
+      - name: film_id
+        description: "Primary key."
+        data_tests: [unique, not_null]
+      - name: title
+        description: "The title of the film."
+        data_tests: [not_null]
+      - name: category
+        description: "The category of the film."
+        data_tests: [not_null]
+      - name: rating
+        description: "The rating of the film."
+        data_tests: [not_null]
+      - name: rating_description
+        description: "The description of the rating."
+      - name: rental_rate
+        description: "The rental rate of the film."
+        data_tests: [not_null]
+      - name: inventory_count
+        description: "The number of inventory items for the film."
+        data_tests: [not_null]
+      - name: times_rented
+        description: "The number of times the film has been rented."
+        data_tests: [not_null]
+      - name: is_available
+        description: "Whether the film is currently available for rent."
+

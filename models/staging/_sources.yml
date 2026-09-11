@@ -1,0 +1,29 @@
+version: 2
+
+# The Pagila raw layer, pre-loaded into the `public` schema by Docker.
+# Reference these in your staging models as {{ source('pagila', 'customer') }}.
+sources:
+  - name: pagila
+    description: "Pagila — the standard Postgres sample DB (a DVD rental store)."
+    schema: public
+    tables:
+      - name: customer
+        description: "One row per customer."
+      - name: rental
+        description: "One row per rental."
+      - name: payment
+        description: "One row per payment."
+      - name: film
+        description: "One row per film."
+      - name: category
+        description: "One row per film category."
+      - name: film_category
+        description: "One row per film-to-category assignment."
+      - name: inventory
+        description: "One row per inventory item."
+      - name: store
+        description: "One row per store."
+      - name: staff
+      - name: address
+      - name: city
+      - name: country

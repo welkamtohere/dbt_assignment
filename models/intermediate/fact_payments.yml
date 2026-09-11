@@ -1,0 +1,38 @@
+
+models:
+  - name: fact_payments
+    description: "One row per payment, enriched with customer, store, and film context."
+    columns:
+      - name: payment_id
+        description: "Primary key."
+        data_tests: [unique, not_null]
+      - name: paid_at
+        description: "When the payment was made."
+        data_tests: [not_null]
+      - name: paid_date
+        description: "The date of the payment."
+        data_tests: [not_null]
+      - name: customer_id
+        description: "Foreign key to the customer table."
+        data_tests: [not_null]
+      - name: customer_name
+        description: "The full name of the customer, stitched together from first_name and last_name"
+        data_tests: [not_null]
+      - name: staff_id
+        description: "Foreign key to the staff table."
+        data_tests: [not_null]
+      - name: store_id
+        description: "Foreign key to the store table."
+        data_tests: [not_null]
+      - name: rental_id
+        description: "Foreign key to the rental table."
+        data_tests: [not_null]
+      - name: film_id
+        description: "Foreign key to the film table."
+        data_tests: [not_null]
+      - name: film_title
+        description: "The title of the film."
+        data_tests: [not_null]
+      - name: amount
+        description: "The amount of the payment." 
+        data_tests: [not_null]

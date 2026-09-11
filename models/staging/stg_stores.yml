@@ -1,0 +1,18 @@
+version: 2
+
+# ---------------------------------------------------------------------
+# MODELS — descriptions (feed the docs site) + generic tests
+# ---------------------------------------------------------------------
+models:
+  - name: stg_stores
+    description: "One cleaned row per store."
+    columns:
+      - name: store_id
+        description: "Primary key."
+        data_tests: [unique, not_null]
+      - name: manager_staff_id
+        description: "Foreign key to the staff table."
+        data_tests: [not_null]
+      - name: address_id
+        description: "Foreign key to the address table."
+        data_tests: [not_null]

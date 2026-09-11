@@ -1,0 +1,12 @@
+dbt_class:
+  outputs:
+    dev:
+      dbname: analytics
+      host: postgres
+      pass: dbt
+      port: 5432
+      schema: dbt_assignment
+      threads: 1
+      type: postgres
+      user: dbt
+  target: dev

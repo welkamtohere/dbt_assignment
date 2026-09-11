@@ -1,0 +1,25 @@
+version: 2
+
+# ---------------------------------------------------------------------
+# MODELS — descriptions (feed the docs site) + generic tests
+# ---------------------------------------------------------------------
+models:
+  - name: stg_films
+    description: "One cleaned row per film, with a stitched title."
+    columns:
+      - name: film_id
+        description: "Primary key."
+        data_tests: [unique, not_null]
+      - name: title
+        description: "The title of the film."
+        data_tests: [not_null]
+      - name: description
+        description: "The description of the film."
+      - name: rental_rate
+        description: "The rental rate of the film."
+      - name: replacement_cost
+        description: "The replacement cost of the film."
+      - name: length_minutes
+        description: "The length of the film in minutes."
+      - name: rating
+        description: "The rating of the film."  

@@ -1,0 +1,25 @@
+models:
+  - name: mart_film_performance
+    description: "Film dimension — based on rentals and payment"
+    columns:
+      - name: film_id
+        description: "Primary key."
+        data_tests: [unique, not_null]
+      - name: title
+        description: "The title of the film."
+        data_tests: [not_null]
+      - name: category
+        description: "The category of the film."
+        data_tests: [not_null]  
+      - name: rental_rate
+        description: "The rental rate of the film."
+        data_tests: [not_null]
+      - name: inventory_count
+        description: "The number of inventory items for the film."
+        data_tests: [not_null]
+      - name: times_rented
+        description: "The number of times the film has been rented."
+        data_tests: [not_null]
+      - name: total_revenue
+        description: "The total amount of money the film has generated in revenue."
+        data_tests: [not_null]

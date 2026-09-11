@@ -1,0 +1,23 @@
+
+models:
+  - name: dim_customers
+    description: "Customer dimension — identity, location, and lifetime value."
+    columns:
+      - name: customer_id
+        description: "Primary key."
+        data_tests: [unique, not_null]
+      - name: customer_name
+        description: "The full name of the customer, stitched together from first_name and last_name"
+        data_tests: [not_null]
+      - name: total_rentals
+        description: "The total number of rentals the customer has made."
+        data_tests: [not_null]
+      - name: first_rented_at
+        description: "When the customer first rented a film."
+        data_tests: [not_null]
+      - name: last_rented_at
+        description: "When the customer last rented a film."
+        data_tests: [not_null]
+      - name: lifetime_payment_total
+        description: "The total amount of money the customer has spent on rentals."
+        data_tests: [not_null]

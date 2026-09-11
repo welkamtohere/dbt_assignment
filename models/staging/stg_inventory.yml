@@ -1,0 +1,20 @@
+version: 2
+
+# ---------------------------------------------------------------------
+# MODELS — descriptions (feed the docs site) + generic tests
+# ---------------------------------------------------------------------
+models:
+  - name: stg_inventory
+    description: "One cleaned row per inventory item, with a stitched title."
+    columns:
+      - name: inventory_id
+        description: "Primary key."
+        data_tests: [unique, not_null]
+      - name: film_id
+        description: "Foreign key to the film table."
+        data_tests: [not_null]
+      - name: store_id
+        description: "Foreign key to the store table."
+        data_tests: [not_null]
+
+

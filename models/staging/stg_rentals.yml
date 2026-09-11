@@ -1,0 +1,27 @@
+version: 2
+
+# ---------------------------------------------------------------------
+# MODELS — descriptions (feed the docs site) + generic tests
+# ---------------------------------------------------------------------
+models:
+  - name: stg_rentals
+    description: "One cleaned row per rental."
+    columns:
+      - name: rental_id
+        description: "Primary key."
+        data_tests: [unique, not_null]
+      - name: inventory_id
+        description: "Foreign key to the inventory table."
+        data_tests: [not_null]
+      - name: customer_id
+        description: "Foreign key to the customer table."
+        data_tests: [not_null]
+      - name: staff_id
+        description: "Foreign key to the staff table."
+        data_tests: [not_null]
+      - name: rented_at
+        description: "When the rental started."   
+        data_tests: [not_null]
+      - name: returned_at
+        description: "When the rental ended."
+        data_tests: [not_null]

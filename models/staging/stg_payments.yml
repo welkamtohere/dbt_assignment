@@ -1,0 +1,27 @@
+version: 2
+
+# ---------------------------------------------------------------------
+# MODELS — descriptions (feed the docs site) + generic tests
+# ---------------------------------------------------------------------
+models:
+  - name: stg_payments
+    description: "One cleaned row per payment."
+    columns:
+      - name: payment_id
+        description: "Primary key."
+        data_tests: [unique, not_null]
+      - name: customer_id
+        description: "Foreign key to the customer table."
+        data_tests: [not_null]
+      - name: rental_id
+        description: "Foreign key to the rental table."
+        data_tests: [not_null]
+      - name: staff_id
+        description: "Foreign key to the staff table."
+        data_tests: [not_null]
+      - name: amount
+        description: "The amount of the payment."
+        data_tests: [not_null]
+      - name: paid_at
+        description: "When the payment was made."
+        data_tests: [not_null]

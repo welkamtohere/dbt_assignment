@@ -1,0 +1,18 @@
+version: 2
+
+# ---------------------------------------------------------------------
+# MODELS — descriptions (feed the docs site) + generic tests
+# ---------------------------------------------------------------------
+models:
+  - name: stg_film_categories
+    description: "One cleaned row per film category."
+    columns:
+      - name: film_id
+        description: "Foreign key to the film."
+        data_tests: [not_null]
+      - name: category_id
+        description: "Foreign key to the category."
+        data_tests: [not_null]
+      - name: last_update
+        description: "When the row was last updated."
+        data_tests: [not_null]

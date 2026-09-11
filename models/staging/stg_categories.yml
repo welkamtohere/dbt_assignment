@@ -1,0 +1,15 @@
+version: 2
+
+# ---------------------------------------------------------------------
+# MODELS — descriptions (feed the docs site) + generic tests
+# ---------------------------------------------------------------------
+models:
+  - name: stg_categories
+    description: "One cleaned row per category."
+    columns:
+      - name: category_id
+        description: "Primary key."
+        data_tests: [unique, not_null]
+      - name: name
+        description: "The name of the category."
+        data_tests: [not_null]

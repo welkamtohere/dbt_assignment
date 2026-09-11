@@ -1,0 +1,20 @@
+models:
+  - name: mart_daily_revenue
+    description: "Daily revenue — based on rentals and payment"
+    columns:
+      - name: paid_date
+        description: "The date of the payment."
+        data_tests: [not_null]
+      - name: store_id
+        description: "Foreign key to the store table."
+        data_tests: [not_null]
+      - name: total_payments
+        description: "The total number of payments made on that date."
+        data_tests: [not_null]
+      - name: unique_customers
+        description: "The total number of unique customers who made payments on that date."
+        data_tests: [not_null]
+      - name: total_revenue
+        description: "The total amount of money generated in revenue on that date."
+        data_tests: [not_null]
+
