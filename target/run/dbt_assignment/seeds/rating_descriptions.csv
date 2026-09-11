@@ -1,9 +1,7 @@
 
     
     
-    
-    create table "analytics"."dbt_assignment_assignment"."rating_descriptions" ("rating" text,"description" text)
-  ;
+    truncate table "analytics"."dbt_assignment_assignment"."rating_descriptions";
     -- dbt seed --
     
           insert into "analytics"."dbt_assignment_assignment"."rating_descriptions" ("rating", "description") values
