@@ -17,6 +17,6 @@ select
     rental_id, 
     staff_id, 
     amount, 
-    payment_date::date as paid_date
+    payment_date as paid_at
 from source
   );

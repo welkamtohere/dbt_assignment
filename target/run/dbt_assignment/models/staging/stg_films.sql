@@ -18,5 +18,5 @@ select
     replacement_cost, 
     length as length_minutes, 
     rating::text as rating
-from source`
+from source
   );
