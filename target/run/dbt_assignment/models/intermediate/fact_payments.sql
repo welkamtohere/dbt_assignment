@@ -1,4 +1,15 @@
 
+      
+  
+    
+
+  create  table "analytics"."dbt_assignment_assignment"."fact_payments"
+  
+  
+    as
+  
+  (
+    
 
 with payments as (
 
@@ -39,3 +50,6 @@ from payments p
 left join customers c on c.customer_id = p.customer_id
 left join rentals r on r.rental_id = p.rental_id
 left join films f on f.film_id = r.film_id
+  );
+  
+  

@@ -13,26 +13,23 @@ with payments as (
 ),
 
 customers as (
-````
     select customer_id, full_name from {{ ref('stg_customers') }}
-
 ),
 
 rentals as (
-`
+
     select 
         r.rental_id, 
         i.film_id, 
         i.store_id
     from {{ ref('stg_rentals') }} r
     left join {{ ref('stg_inventory') }} i on i.inventory_id = r.inventory_id
-
 ),
 films as (
     select film_id, title from {{ ref('stg_films') }}
 )
 
-selec
+select
     p.payment_id, 
     p.paid_at, 
     p.paid_date, 
