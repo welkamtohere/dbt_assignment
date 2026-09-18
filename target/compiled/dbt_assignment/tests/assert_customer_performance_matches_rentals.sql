@@ -1,10 +1,3 @@
-lMemastikan:
-Total total_rentals di mart_customer_performance sesuai dengan jumlah rental di stg_rentals.
-Total lifetime_payment_total di mart_customer_performance sesuai dengan total amount di stg_payments.
-
-
-
-
 
 
 with rentals as (
